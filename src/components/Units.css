@@ -1,0 +1,37 @@
+/*
+    Basic CSS (Units.css)
+*/
+
+.table-container {
+  padding: 20px;
+}
+
+.units-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.units-table th,
+.units-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.units-table th {
+  background-color: #4CAF50; /* Add color to headers */
+  color: white;
+}
+
+.units-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternating row colors */
+}
+
+.units-table tr:hover {
+  background-color: #ddd; /* Hover effect */
+}
+
+.units-table th {
+  text-align: left;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

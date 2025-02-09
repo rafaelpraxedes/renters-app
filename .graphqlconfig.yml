@@ -1,0 +1,15 @@
+projects:
+  rentersapp:
+    schemaPath: amplify/backend/api/rentersapp/build/schema.graphql
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+extensions:
+  amplify:
+    version: 3

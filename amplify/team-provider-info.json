@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rentersapp-dev-d52ac-authRole",
+      "UnauthRoleArn": "arn:aws:iam::061039772791:role/amplify-rentersapp-dev-d52ac-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::061039772791:role/amplify-rentersapp-dev-d52ac-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-rentersapp-dev-d52ac-deployment",
+      "UnauthRoleName": "amplify-rentersapp-dev-d52ac-unauthRole",
+      "StackName": "amplify-rentersapp-dev-d52ac",
+      "StackId": "arn:aws:cloudformation:us-west-1:061039772791:stack/amplify-rentersapp-dev-d52ac/4f2fded0-e43d-11ef-bee7-02e745381fb3",
+      "AmplifyAppId": "d1o2t6bkn9396v"
+    },
+    "categories": {
+      "api": {
+        "rentersapp": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1o2t6bkn9396v",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
