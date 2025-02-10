@@ -9,7 +9,7 @@
       "UnauthRoleName": "amplify-rentersapp-dev-d52ac-unauthRole",
       "StackName": "amplify-rentersapp-dev-d52ac",
       "StackId": "arn:aws:cloudformation:us-west-1:061039772791:stack/amplify-rentersapp-dev-d52ac/4f2fded0-e43d-11ef-bee7-02e745381fb3",
-      "AmplifyAppId": "d1o2t6bkn9396v"
+      "AmplifyAppId": "d2v8xuv3qysyy9"
     },
     "categories": {
       "api": {
@@ -17,7 +17,7 @@
       },
       "hosting": {
         "amplifyhosting": {
-          "appId": "d1o2t6bkn9396v",
+          "appId": "d2v8xuv3qysyy9",
           "type": "manual"
         }
       }
