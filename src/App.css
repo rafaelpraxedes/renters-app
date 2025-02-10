@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+h2 {
+  color: #336699; /* Medium Blue */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

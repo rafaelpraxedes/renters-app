@@ -1,7 +1,6 @@
 import "./App.css";
 
 import { generateClient } from 'aws-amplify/api';
-
 import Units from "./components/Units";
 
 const client = generateClient();

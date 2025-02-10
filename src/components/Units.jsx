@@ -40,7 +40,7 @@ export default function Units({ client }) {
 
   return (
     <div className="table-container">
-      <table className="units-table">
+      <table className="customer-table">
         <thead>
           <tr>
             <th>ID</th>
