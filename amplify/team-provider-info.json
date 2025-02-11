@@ -14,12 +14,6 @@
     "categories": {
       "api": {
         "rentersapp": {}
-      },
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d2v8xuv3qysyy9",
-          "type": "manual"
-        }
       }
     }
   }
