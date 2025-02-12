@@ -1,19 +1,24 @@
 // src/components/Units.jsx
 import React from "react";
-import "./Units.css";
+import "./Units4.css";
 
 import { useEffect, useState } from 'react';
-
 //import { createUnit } from './graphql/mutations';
 import { listUnits } from '../graphql/queries';
 
 export default function Units({ client }) {
 
-    const [formState, setFormState] = useState('');
     const [units, setUnits] = useState([]);
 
     useEffect(() => {
-      fetchUnits();
+      let hasFetchedUnits = false;
+      if (!hasFetchedUnits) {
+        fetchUnits();
+      }
+      // cleanup function
+      return () => {
+        hasFetchedUnits = true;
+      };
     }, []);
 
     async function fetchUnits() {
@@ -39,57 +44,61 @@ export default function Units({ client }) {
     }
 
   return (
-    <div className="table-container">
-      <table className="customer-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>#</th>
-            <th>Address</th>
-            <th>Status</th>
-            <th>Status Date</th>
-            <th>Site</th>
-            <th>Rent</th>
-            <th>Available</th>
-            <th>Size</th>
-            <th>Natural Light</th>
-            <th>Modern Building</th>
-            <th>Quiet</th>
-            <th>Balcony</th>
-            <th>Good Views</th>
-            <th>Nearby Parks</th>
-            <th>AC</th>
-            <th>Corner Unit</th>
-            <th>Wifi</th>
-            <th>Furnished</th>
-          </tr>
-        </thead>
-        <tbody>
-          {units.map((unit) => (
-            <tr key={unit.id}>
-              <td>{unit.id}</td>
-              <td>{unit.ranking}</td>
-              <td>{unit.address}</td>
-              <td>{unit.status}</td>
-              <td>{unit.statusDate}</td>
-              <td>{unit.site}</td>
-              <td>{unit.rent}</td>
-              <td>{unit.available}</td>
-              <td>{unit.size}</td>
-              <td>{unit.naturalLight}</td>
-              <td>{unit.modernBuilding}</td>
-              <td>{unit.quiet}</td>
-              <td>{unit.balcony}</td>
-              <td>{unit.goodViews}</td>
-              <td>{unit.nearbyParks}</td>
-              <td>{unit.ac}</td>
-              <td>{unit.cornerUnit}</td>
-              <td>{unit.wifi}</td>
-              <td>{unit.furnished}</td>
+    <div>
+      <h2>Apartment Listings</h2>
+      <div className="table-container">
+        <table className="units-table">
+          <thead>
+            <tr>
+            <th className="header-id">ID</th>
+            <th className="header-ranking">#</th>
+            <th className="header-address">Address</th>
+            <th className="header-status">Status</th>
+            <th className="header-status-date">Status Date</th>
+            <th className="header-site">Site</th>
+            <th className="header-rent">Rent</th>
+            <th className="header-available">Available</th>
+            <th className="header-size">Size</th>
+            <th className="header-natural-light">Natural Light</th>
+            <th className="header-modern-building">Modern Building</th>
+            <th className="header-quiet">Quiet</th>
+            <th className="header-balcony">Balcony</th>
+            <th className="header-good-views">Good Views</th>
+            <th className="header-nearby-parks">Nearby Parks</th>
+            <th className="header-ac">AC</th>
+            <th className="header-corner-unit">Corner Unit</th>
+            <th className="header-wifi">Wifi</th>
+            <th className="header-furnished">Furnished</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {units.map((unit) => (
+              <tr key={unit.id}>
+                <td className="col-id">{unit.id}</td>
+                <td className="col-ranking">{unit.ranking}</td>
+                <td className="col-address">{unit.address}</td>
+                <td className="col-status">{unit.status}</td>
+                <td className="col-status-date">{unit.statusDate}</td>
+                <td className="col-site">{unit.site}</td>
+                <td className="col-rent">{unit.rent}</td>
+                <td className="col-available">{unit.available}</td>
+                <td className="col-size">{unit.size}</td>
+                <td className="col-natural-light">{unit.naturalLight}</td>
+                <td className="col-modern-building">{unit.modernBuilding}</td>
+                <td className="col-quiet">{unit.quiet}</td>
+                <td className="col-balcony">{unit.balcony}</td>
+                <td className="col-good-views">{unit.goodViews}</td>
+                <td className="col-nearby-parks">{unit.nearbyParks}</td>
+                <td className="col-ac">{unit.ac}</td>
+                <td className="col-corner-unit">{unit.cornerUnit}</td>
+                <td className="col-wifi">{unit.wifi}</td>
+                <td className="col-furnished">{unit.furnished}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
+
 }

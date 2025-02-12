@@ -1,0 +1,102 @@
+/* General */
+body {
+    background-color: #161E27;
+    font-family: "Inter", sans-serif;
+    color: #ddd;
+}
+
+h2 {
+    color: #4EE3C2; /* Soft neon cyan */
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Table Container */
+.table-container {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Table Wrapper - Rounded Corners Only */
+.table-wrapper {
+    background: rgba(30, 42, 56, 0.8);  /* Glass-like effect */
+    padding: 20px;
+    border-radius: 20px;  /* Rounded corners */
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+/* Table */
+.units-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures no gaps */
+    font-size: 12px;
+    color: #f1f1f1;
+}
+
+/* Rounded Corners on the Table */
+.units-table thead tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.units-table thead tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.units-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.units-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+/* Table Header - Softer & Elegant */
+.units-table thead {
+    background: linear-gradient(135deg, #4EE3C2, #1464a5);
+    color: #161E27;
+}
+
+.units-table th {
+    padding: 16px;
+    letter-spacing: 0.05em;
+}
+
+/* Table Rows */
+.units-table tbody tr {
+    transition: all 0.3s ease-in-out;
+}
+
+.units-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.units-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: scale(1.015);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Table Cells */
+.units-table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Last Row - No Border */
+.units-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .units-table th, .units-table td {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
