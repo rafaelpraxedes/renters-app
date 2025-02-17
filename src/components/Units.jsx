@@ -45,7 +45,7 @@ export default function Units({ client }) {
 
   return (
     <div>
-      {/* <h2>Apartment Listings</h2> */}
+      <h2>Apartment Listings</h2>
       <div className="table-container">
         <table className="units-table">
           <thead>
